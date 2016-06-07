@@ -195,6 +195,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
@@ -251,6 +261,160 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/07/python 之切片( 转）/" itemprop="url">
+                  python 之 切片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-07T14:45:04+08:00" content="2016-06-07">
+              2016-06-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/07/python 之切片( 转）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/07/python 之切片( 转）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/07/python 之切片( 转）/" class="leancloud_visitors" data-flag-title="python 之 切片">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>取一个list或tuple的部分元素是非常常见的操作。比如，一个list如下：</p>
+<pre>
+>>> L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
+</pre>
+取前3个元素，应该怎么做？
+
+笨办法：
+<pre>
+>>> [L[0], L[1], L[2]]
+['Michael', 'Sarah', 'Tracy']
+</pre>
+之所以是笨办法是因为扩展一下，取前N个元素就没辙了。
+
+取前N个元素，也就是索引为0-(N-1)的元素，可以用循环：
+<pre>
+>>> r = []
+>>> n = 3
+>>> for i in range(n):
+...     r.append(L[i])
+...
+>>> r
+['Michael', 'Sarah', 'Tracy']
+</pre>
+对这种经常取指定索引范围的操作，用循环十分繁琐，因此，Python提供了切片（Slice）操作符，能大大简化这种操作。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/07/python 之切片( 转）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -332,40 +496,19 @@
 
       
         
-          
-            <blockquote>
-<p><a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
+          <blockquote>
+<p><a href="https://hexo.io/">https://hexo.io/</a></p>
 </blockquote>
-<h1 id="创建github域名和空间"><a href="#创建github域名和空间" class="headerlink" title="创建github域名和空间"></a>创建github域名和空间</h1><p><li>在github官网上注册账号</li></p>
-<p><li>创建仓库（格式：username/username.github.io）</li></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><li>git （windows 直接下载安装程序）</li></p>
-<p><li>node.js(windows 下一路点击next)</li></p>
-<p><li>hexo（以上完成后，在git bush命令下，输入： $ sudo npm install hexo-cli -g）</li></p>
-<h1 id="编写，发布"><a href="#编写，发布" class="headerlink" title="编写，发布"></a>编写，发布</h1><p><li><em>创建博客</em>（格式：$ hexo init username.github.io）</li></p>
-<p><li><em>安装主题</em></li></p>
-<pre>（格式：$ cd username.github.io
-       $ git clone https://github.com/iissnan/hexo-theme-next themes/next）
-</pre>
-          更改配置：
-        <ol>
-         <li>username.github.io/_config.yml：
-         </li><li>title:  xxx   //你博客的名字
-         </li><li>author: xxx //你的名字
-         </li><li>language: zh-Hans    //语言 中文
-         </li><li>theme: next   //刚刚安装的主题名称
-         </li><li>deploy:
-          <pre>type: git    //使用Git 发布
-repo: https://github.com/username/username.github.io.git    // 刚创建的Github仓库</pre>
-</li></ol>
-
-<li>*常用hexo命令(编写blog内容)*：
-<pre>hexo new "articleName" //写文章
-hexo new page "pageName"//单个页面</pre>
-
-<p><li><em>测试</em>：  $ hexo s</li></p>
-<p><li><em>发布</em>：<br>       <pre>$ npm install hexo-deployer-git –save<br>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</pre></li></p>
-</li>
-          
+<h1 id="创建github域名和空间"><a href="#创建github域名和空间" class="headerlink" title="创建github域名和空间"></a>创建github域名和空间</h1><p><li>在github官网上注册账号</p>
+<p><li>创建仓库（格式：username/username.github.io）</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><li>git （windows 直接下载安装程序）</p>
+<p><li>node.js(windows 下一路点击next)</p>
+<p><li>hexo（以上完成后，在git bush命令下，输入： $ sudo npm install hexo-cli -g）<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/06/hexo快速搭建blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -551,17 +694,24 @@ hexo new page "pageName"//单个页面</pre>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
